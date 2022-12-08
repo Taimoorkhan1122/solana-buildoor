@@ -6,7 +6,7 @@ import WalletContextProvider from "../components/WalletContextProvider";
 
 const colors = {
     background: "#1f1f1f",
-    accent: "833bbe",
+    accent: "#833bbe",
     bodyText: "rgba(255,255,255,0.75)",
 };
 

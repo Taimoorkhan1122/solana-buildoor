@@ -5,7 +5,11 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Disconnected from "../components/Disconnected";
 
+import { useWallet } from "@solana/wallet-adapter-react";
+import Connected from "../components/Connected";
+
 export default function Home() {
+    const { connected } = useWallet();
     return (
         <div className={styles.container}>
             <Head>
@@ -22,7 +26,7 @@ export default function Home() {
                 <Stack w="full" h="calc(100vh)" justify="center">
                     <Navbar />
                     <Spacer />
-                    <Disconnected />
+                    {connected ? <Connected /> : <Disconnected />}
                     <Center></Center>
                     <Spacer />
                     <Center>
